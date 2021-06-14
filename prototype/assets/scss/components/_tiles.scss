@@ -1,0 +1,86 @@
+.tile-wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+
+  .tile {
+    @extend .card;
+    flex-grow: 1;
+    padding: 20px;
+    margin: 0 2rem 2rem 0;
+  }
+
+  .tile-full-width {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+
+    .tile-section {
+      flex-basis: 50%;
+    }
+  }
+
+  .tile-title {
+    display: block;
+    width: 100%;
+  }
+
+  .tile-chart {
+    position: relative;
+    width: 400px;
+    height: 300px;
+
+    &.tile-chart-small {
+      width: 266px;
+      height: 200px;
+    }
+
+    .preloader-wrapper {
+      position: absolute;
+      left: 50%;
+      top: 30%;
+    }
+  }
+
+  .tile-table {
+    display: flex;
+    flex-flow: column nowrap;
+
+    &.tile-table-scroll {
+      max-height: 200px;
+      overflow-y: scroll;
+    }
+
+    .tile-table-row {
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: center;
+      padding: 0.8rem;
+
+      &:hover {
+        background-color: $gray-color;
+      }
+
+      i {
+        margin-right: 1.8rem;
+      }
+
+      span {
+        font-size: 1.4rem;
+      }
+  
+      .tile-table-row-title {
+        font-weight: bold;
+        margin-right: 1rem;
+        width: 180px;
+      }
+    }
+
+    .tile-table-divider {
+      width: 100%;
+      height: 2px;
+      margin: 1rem 0;
+      background-color: $dark-gray-color;
+    }
+  }
+}

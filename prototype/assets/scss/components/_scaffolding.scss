@@ -1,0 +1,63 @@
+body, .application {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  min-height: 93vh; // weird setting is fix for footer display on iOS
+}
+
+.application {
+  background-color: $gray-color;
+}
+
+header, nav, main, footer {
+  width: auto;
+  padding: 0 15px;
+  
+  @media #{$large-and-up} {
+    padding: 0 30px;
+    margin-left: $sidenav-width;
+  }
+}
+
+header {
+  border-bottom: $primary-border;
+  background-color: $white;
+  padding-top: 2.8rem;
+  margin-bottom: 30px;
+
+  h1 {
+    margin-top: 0;
+  }
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+footer {
+  @extend .valign-wrapper;
+  flex-shrink: 0;
+  height: 120px;
+  margin-top: 30px;
+  background-color: $white;
+  border-top: $primary-border;
+
+  .btn-floating {
+    margin-left: auto;
+  }
+}
+
+.row:last-of-type {
+  margin-bottom: 0;
+}
+
+a.link {
+  text-decoration: none;
+  color: darken($secondary-color, 5%);
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: underline;
+    color: lighten($secondary-color, 5%);
+  }
+}

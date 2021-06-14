@@ -1,0 +1,29 @@
+// Fix for displaying the menu icon in the navbar
+nav i.material-icons {
+  display: inline-block;
+}
+
+// Fix for display of materialize select elements
+.select-wrapper {
+  top: 10px;
+  margin-top: 20px;
+
+  + label {
+    top: -4px;
+    font-size: 1rem;
+  }
+}
+
+// Add space between buttons
+.btn {
+  margin-right: 10px;
+
+  &:last-of-type {
+    margin-right: 0;
+  }
+}
+
+// Trigger not used as link, but show cursor
+.sidenav-trigger {
+  cursor: pointer;
+}

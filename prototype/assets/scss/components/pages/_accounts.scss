@@ -1,0 +1,48 @@
+.accounts {
+
+  .data {
+
+    .data-dot {
+      width: 38px;
+      height: 38px;
+      font-size: 16px;
+    }
+  }
+  
+  .selector {
+  
+    label {
+  
+      span.selector-label {
+        font-size: 12px;
+      }
+    }
+  }
+}
+
+.account {
+  input[type="number"] {
+    width: 90%;
+    padding-left: 10px;
+
+    @media #{$medium-and-up} {
+      width: 70%;
+    }
+
+    @media #{$large-and-up} {
+      width: 50%;
+    }
+  }
+
+  .select-wrapper {
+    width: 96%;
+    
+    @media #{$medium-and-up} {
+      width: 76%;
+    }
+
+    @media #{$large-and-up} {
+      width: 56%;
+    }
+  }
+}
