@@ -19,6 +19,7 @@
  * Called when a user visits the web app or
  * a programs sends an HTTP GET request.
  */
-function doGet() {
+function doGet(e) {
+  console.log(e.property.l)
   return getHtml('views/core/app');
 }
